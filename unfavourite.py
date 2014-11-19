@@ -30,7 +30,7 @@ while len(favs) > 0:
 	for f in favs:
 		api.destroy_favorite(f.id)
 		num_destroyed += 1
-		if num_destroyed % 100 == 1:
+		if num_destroyed % 100 == 0:
 			print("{} favourites have been destroyed".format(num_destroyed))
 	favs = api.favorites(count=batch_number)
 
